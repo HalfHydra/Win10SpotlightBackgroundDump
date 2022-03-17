@@ -1,0 +1,50 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\Hydra\\Documents\\GitHub\\Windows10BackgroundDump\\Windows10BackgroundDump.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Hydra\\Documents\\GitHub\\Windows10BackgroundDump\\Windows10BackgroundDump.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Hydra\\Documents\\GitHub\\Windows10BackgroundDump\\Windows10BackgroundDump.csproj",
+        "projectName": "Windows10BackgroundDump",
+        "projectPath": "C:\\Users\\Hydra\\Documents\\GitHub\\Windows10BackgroundDump\\Windows10BackgroundDump.csproj",
+        "packagesPath": "C:\\Users\\Hydra\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Hydra\\Documents\\GitHub\\Windows10BackgroundDump\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Hydra\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net48"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net48": {
+            "targetAlias": "net48",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net48": {
+          "targetAlias": "net48",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+        }
+      },
+      "runtimes": {
+        "win7-x86": {
+          "#import": []
+        }
+      }
+    }
+  }
+}

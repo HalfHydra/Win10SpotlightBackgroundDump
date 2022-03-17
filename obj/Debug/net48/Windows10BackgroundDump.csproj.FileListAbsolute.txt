@@ -1,0 +1,11 @@
+C:\Users\Hydra\Documents\GitHub\Windows10BackgroundDump\bin\Debug\net48\Windows10BackgroundDump.exe.config
+C:\Users\Hydra\Documents\GitHub\Windows10BackgroundDump\bin\Debug\net48\Windows10BackgroundDump.exe
+C:\Users\Hydra\Documents\GitHub\Windows10BackgroundDump\bin\Debug\net48\Windows10BackgroundDump.pdb
+C:\Users\Hydra\Documents\GitHub\Windows10BackgroundDump\obj\Debug\net48\Windows10BackgroundDump.csproj.AssemblyReference.cache
+C:\Users\Hydra\Documents\GitHub\Windows10BackgroundDump\obj\Debug\net48\Windows10BackgroundDump.csproj.SuggestedBindingRedirects.cache
+C:\Users\Hydra\Documents\GitHub\Windows10BackgroundDump\obj\Debug\net48\Windows10BackgroundDump.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Hydra\Documents\GitHub\Windows10BackgroundDump\obj\Debug\net48\Windows10BackgroundDump.AssemblyInfoInputs.cache
+C:\Users\Hydra\Documents\GitHub\Windows10BackgroundDump\obj\Debug\net48\Windows10BackgroundDump.AssemblyInfo.cs
+C:\Users\Hydra\Documents\GitHub\Windows10BackgroundDump\obj\Debug\net48\Windows10BackgroundDump.csproj.CoreCompileInputs.cache
+C:\Users\Hydra\Documents\GitHub\Windows10BackgroundDump\obj\Debug\net48\Windows10BackgroundDump.exe
+C:\Users\Hydra\Documents\GitHub\Windows10BackgroundDump\obj\Debug\net48\Windows10BackgroundDump.pdb
