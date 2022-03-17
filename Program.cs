@@ -10,24 +10,34 @@ namespace WindowsBackgroundDump
         {
             Console.Write("Windows Background Extractor\n>");
 
-            string currentPath = Directory.GetCurrentDirectory();
+            string CDNPath = null;
 
-            if (!Directory.Exists(Path.Combine(currentPath, "Output"))) 
+            string[] subDirs = Directory.GetDirectories(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Packages"));
+            foreach (string dir in subDirs)
             {
-                Directory.CreateDirectory(Path.Combine(currentPath, "Output\\Desktop"));
-                Directory.CreateDirectory(Path.Combine(currentPath, "Output\\Mobile"));
-            }
-
-            string CDNPath = "";
-
-            string[] subdirectories = Directory.GetDirectories(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Packages"));
-            foreach (string directory in subdirectories)
-            {
-                if(directory.IndexOf("Microsoft.Windows.ContentDeliveryManager") != -1) 
+                if(dir.IndexOf("Microsoft.Windows.ContentDeliveryManager") != -1) 
                 {
-                    CDNPath = directory;
+                    CDNPath = dir;
                     break;
                 }
+            }
+
+            if(CDNPath == null)
+            {
+                Console.Write("Could not find the Microsoft.Windows.ContentDeliveryManager folder");
+                return;
+            }
+
+            string currentPath = Directory.GetCurrentDirectory();
+
+            string desktopPath = Path.Combine(currentPath, "Output\\Desktop");
+
+            string mobilePath = Path.Combine(currentPath, "Output\\Mobile");
+
+            if (!Directory.Exists(desktopPath)) 
+            {
+                Directory.CreateDirectory(desktopPath);
+                Directory.CreateDirectory(mobilePath);
             }
 
             string imagePath = Path.Combine(CDNPath, "LocalState\\Assets");
@@ -41,9 +51,9 @@ namespace WindowsBackgroundDump
                     string filePath = Path.Combine(imagePath, s);
                     Bitmap bmp = new Bitmap(filePath);
                     if (bmp.Width == 1920 && bmp.Height == 1080) {
-                        targetPath = Path.Combine(currentPath, "Output\\Desktop");
+                        targetPath = desktopPath;
                     } else if (bmp.Width == 1080 && bmp.Height == 1920) {
-                        targetPath = Path.Combine(currentPath, "Output\\Mobile");
+                        targetPath = mobilePath;
                     } else {
                         continue; //Bloatware, Tile Icons, etc.
                     }
