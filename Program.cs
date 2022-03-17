@@ -39,20 +39,18 @@ namespace WindowsBackgroundDump
                 foreach (string s in files)
                 {   
                     string filePath = Path.Combine(imagePath, s);
-                    FileInfo info = new FileInfo(filePath);
-                    if(info.Length > 200000) //filter out the tile icons and bloatware
-                    {
-                        Bitmap bmp = new Bitmap(filePath);
-                        if (bmp.Width == 1920 && bmp.Height == 1080) {
-                            targetPath = Path.Combine(currentPath, "Output\\Desktop");
-                        } else {
-                            targetPath = Path.Combine(currentPath, "Output\\Mobile");
-                        }
-                        string fileName = Path.GetFileName(s) + ".png";
-                        string destFile = Path.Combine(targetPath, fileName);
-                        File.Copy(s, destFile, true);
-                        Console.Write("Copied image to " + destFile + "\n");
+                    Bitmap bmp = new Bitmap(filePath);
+                    if (bmp.Width == 1920 && bmp.Height == 1080) {
+                        targetPath = Path.Combine(currentPath, "Output\\Desktop");
+                    } else if (bmp.Width == 1080 && bmp.Height == 1920) {
+                        targetPath = Path.Combine(currentPath, "Output\\Mobile");
+                    } else {
+                        continue; //Bloatware, Tile Icons, etc.
                     }
+                    string fileName = Path.GetFileName(s) + ".png";
+                    string destFile = Path.Combine(targetPath, fileName);
+                    File.Copy(s, destFile, true);
+                    Console.Write("Copied image to " + destFile + "\n");
                 }
             }
         }
