@@ -51,6 +51,7 @@ namespace WindowsBackgroundDump
                         string fileName = Path.GetFileName(s) + ".png";
                         string destFile = Path.Combine(targetPath, fileName);
                         File.Copy(s, destFile, true);
+                        Console.Write("Copied image to " + destFile + "\n");
                     }
                 }
             }
